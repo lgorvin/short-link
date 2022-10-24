@@ -24,15 +24,51 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: hsl(0, 0%, 94%);
+  background-color: rgb(245 245 245);
+  overflow-x: hidden;
+}
+
+.expandBg {
+  color:rgb(245 245 245);
 }
 
 .bgShorter {
   background-color: hsl(255, 11%, 22%);
 }
 
+.bgFooter {
+  background-color: hsl(260, 8%, 14%);
+}
+
+.bgNav {
+  background-color: hsl(257, 27%, 26%);
+}
+
 .btnBlue {
   background-color: hsl(180, 66%, 49%);
 }
 
+.whiteText {
+  color: white;
+}
 
+@media (max-width: 400px) { 
+  .margint4 {
+    margin-top: 20px;
+  }
+  .margint2 {
+    margin-top: 8px;
+  }
+  .margint1 {
+    margin-top: 4px;
+  }
+  .marginb1 {
+    margin-bottom: 4px;
+  }
+  .marginb4 {
+    margin-bottom: 20px;
+  }
+  .whiteText {
+    color: black;
+  }
+ }
