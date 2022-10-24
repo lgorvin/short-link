@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const [url, setUrl] = useState("");
-  const [url2, setUrl2] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [components, setComponents] = useState([]);
@@ -41,6 +40,7 @@ const App = () => {
 
   useEffect(() => {
     addComponent();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shortUrl]);
 
   return (
@@ -85,9 +85,11 @@ const App = () => {
         </div>
       </div>
 
-      {components.slice(1).map((e) => (
-        <ShortLink shorted={e} />
-      ))}
+      {!loading ? (
+        components.slice(1).map((e) => <ShortLink shorted={e} />)
+      ) : (
+        <h1 className="text-center mt-5 font-bold text-2xl">Loading...</h1>
+      )}
 
       <Stats />
       <Footer />
