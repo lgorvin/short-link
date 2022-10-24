@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <Navbar className="mb-8" collapseOnSelect expand="lg" variant="light">
       <Container>
-        <Navbar.Brand className="mt-4" href="#home">
+        <Navbar.Brand className="mt-4" href="#/home">
           <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33">
             <path
               fill="#34313D"
