@@ -86,7 +86,10 @@ const App = () => {
       </div>
 
       {!loading ? (
-        components.slice(1).map((e) => <ShortLink shorted={e} />)
+        components
+          .slice(1)
+          .reverse()
+          .map((e) => <ShortLink shorted={e} />)
       ) : (
         <h1 className="text-center mt-5 font-bold text-2xl">Loading...</h1>
       )}
